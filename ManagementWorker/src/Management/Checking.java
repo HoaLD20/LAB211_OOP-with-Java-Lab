@@ -12,6 +12,7 @@ public class Checking {
      * @param to
      * @return
      */
+    
     public static int checkInput(int from, int to) {
         while (true) {
             try {
@@ -28,29 +29,7 @@ public class Checking {
         }
     }
 
-    /**
-     * Check
-     * ID
-     * Exist
-     * :)))
-     * @param listWorker
-     * @param id
-     * @return 
-     */
-
-    /**
-     * Check
- ID
- Exist
- :)))
-     * @param listWorker
-     * @param id
-     * @param name
-     * @param age
-     * @param salary
-     * @param worklocation
-     * @return
-     */
+    //
     public static boolean checkWorkerExist(ArrayList<Worker> listWorker, String id, String name, int age, int salary, String worklocation){
         for(Worker i : listWorker){
             if(id.equalsIgnoreCase(i.getId()) && name.equalsIgnoreCase(i.getName()) && age == i.getAge() && salary == i.getSalary() && worklocation.equalsIgnoreCase(i.getWorklocation())){
@@ -104,6 +83,9 @@ public class Checking {
     }
     /**
      * Check id exist
+     * @param listWorker
+     * @param id
+     * @return 
      */
        public static boolean checkIdExist(ArrayList<Worker> listWorker, String id) {
         //check from first to last list id worker exist or not
