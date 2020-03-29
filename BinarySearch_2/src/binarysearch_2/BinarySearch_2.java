@@ -20,7 +20,7 @@ public class BinarySearch_2 {
             try {
                 size = scanner.nextInt();
             } catch (Exception e) {
-                System.out.println("Nhap so di ma");
+                System.out.println("Enter a number please!");
                 System.out.println("Enter size of array: ");
                 count++;
             }
@@ -28,7 +28,7 @@ public class BinarySearch_2 {
                 scanner.nextLine();
             }
             if (size <= 0 && count == 0) {
-                System.out.println("Dung nhap so am hay so 0 nha");
+                System.out.println("Can not accept negative or zero!");
                 System.out.println("Enter size of array: ");
                 count++;
             }
@@ -36,21 +36,17 @@ public class BinarySearch_2 {
         
         BinarySearch_2 obj = new BinarySearch_2();
         obj.Random();
-//        System.out.print("Unsorted array: ");
-//        obj.Display();
-        
-       
-        
+              
         System.out.println("Enter search value: ");
         searchValue = scanner.nextInt();
         obj.sort(array, 0, size - 1);
-        System.out.print("Sorted array:   ");
+        System.out.println("Sorted array:   ");
         obj.Display();
         
         int result = obj.binarySearch(array, 0, size - 1, searchValue);
         
         if (result == -1) 
-            System.out.println("Element not exist :(((("); 
+            System.out.println("Element does not exist !"); 
         else
             System.out.println("Element found at index " + result); 
         
@@ -67,7 +63,7 @@ public class BinarySearch_2 {
     void Display() {
         System.out.print("[" + array[0]);
         for (int i = 1; i < size; i++) {
-            System.out.print("," + array[i]);
+            System.out.print(", " + array[i]);
         }
         System.out.println("]");
     }
